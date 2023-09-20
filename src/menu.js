@@ -4,6 +4,8 @@ function menu(currentTab){
     const menuMenu = document.createElement('button');
     const menuAbout = document.createElement('button');
 
+    topMenu.classList.add('top-menu');
+
     menuHome.classList.add('menu-tabs');
     menuMenu.classList.add('menu-tabs');
     menuAbout.classList.add('menu-tabs');
