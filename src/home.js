@@ -1,6 +1,4 @@
-import menu from './menu';
-
-function pageLoad() {
+function home() {
     const page = document.createElement('div');
     const logo = document.createElement('img');
     const button = document.createElement('button');
@@ -17,4 +15,4 @@ function pageLoad() {
     return page
 }
 
-export default pageLoad;
+export default home;

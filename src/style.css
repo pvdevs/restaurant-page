@@ -24,7 +24,7 @@ body{
     flex-direction: column;
 }
 
-.menu-tabs h5{
+.nav-tabs h5{
     font-family: var(--main-font);
     font-size: 1.5rem;
     color: #0b0b13;
@@ -58,7 +58,7 @@ body{
     cursor: pointer;
 }
 
-.top-menu {
+.top-nav {
     display: flex;
     gap: 40px;
     justify-content: center;
@@ -66,7 +66,7 @@ body{
     padding: 40px;
 }
 
-.menu-tabs {
+.nav-tabs {
     border: none;
     background: none;
     cursor: pointer;
@@ -75,7 +75,7 @@ body{
     font-family: var(--primary-font);
 }
 
-.menu-tabs:hover {
+.nav-tabs:hover {
     font-weight: 900;
     font-style: italic;
     color: var(--cta-color);
