@@ -86,3 +86,27 @@ body{
     font-style: italic;
     color: var(--cta-color);
 }
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 350px;
+}
+
+.author {
+    font-family: var(--primary-font);
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-style: italic;
+    align-self: end;
+}
+
+.quote-text{
+    font-family: var(--primary-font);
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-style: italic;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
