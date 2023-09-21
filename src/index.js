@@ -2,6 +2,7 @@ import home from './home';
 import menu from './menu';
 import about from './about';
 import nav from './nav';
+import findMe from './footer';
 
 const content = document.getElementById('content');
 
@@ -38,6 +39,7 @@ function createPage(parent, newPage, tab) {
     parent.appendChild(newPage);
     getNavEvents();
     if(tab === 'Home') getCTA();
+    parent.appendChild(findMe());
 }
 
 function removeAllChildren(parent){

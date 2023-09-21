@@ -180,3 +180,41 @@ body{
     overflow-wrap: break-word;
     text-align: justify;
 }
+
+.find-me{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.github-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #363636;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover {
+    transform: scale(1.4);
+    color: #000000;
+}
+
+.me-text {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    color:#0b0b13;
+}
