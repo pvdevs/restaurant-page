@@ -1,9 +1,11 @@
+import Logo from './img/logo.svg'
+
 function about() {
     const page = document.createElement('div');
     const quoteContainer = document.createElement('div');
     const quote = document.createElement('p');
     const author = document.createElement('p');
-    const logo = document.createElement('img');
+    const logo = new Image();
 
     page.classList.add('page');
     quoteContainer.classList.add('quote-container')
@@ -11,8 +13,7 @@ function about() {
     quote.classList.add('quote-text');
     author.classList.add('author');
 
-    logo.setAttribute('src', '../src/img/logo.svg');
-
+    logo.src = Logo;
     quote.textContent = '“Lorem ipsum dolor sit amet consectetur. Libero quis tristique faucibus arcu quam ut ut ipsum. Scelerisque amet ac dictumst lectus id massa diam velit diam. Tristique fusce quam tristique commodo rhoncus eleifend neque. Amet netus dignissim morbi eu a. Pellentesque congue vitae ac ornare tincidunt ullamcorper sit faucibus.”';
     author.textContent = '-Phabin';
 

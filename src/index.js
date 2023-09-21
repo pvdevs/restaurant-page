@@ -1,4 +1,5 @@
 import home from './home';
+import menu from './menu';
 import about from './about';
 import nav from './nav';
 
@@ -8,16 +9,21 @@ createPage(content,home(), 'Home'); // This starts the application with the Home
 
 function getNavEvents() {
     const navButtons = document.querySelectorAll('.nav-tabs');
+    navButtons.forEach(tab => tab.addEventListener('click', () => switchPage(tab.textContent)));
+}
 
-    navButtons.forEach(tab => {
-        tab.addEventListener('click', e => switchPage(tab.textContent));
-    });
+function getCTA() {
+    const cta = document.querySelector('.call-to-action');
+    cta.addEventListener('click', e => createPage(content, menu(), 'Menu'));
 }
 
 function switchPage(tab){
     switch (tab) {
         case 'Home':
             createPage(content, home(), tab);
+            break;
+        case 'Menu':
+            createPage(content, menu(), tab);
             break;
         case 'About':
             createPage(content, about(), tab);
@@ -31,6 +37,7 @@ function createPage(parent, newPage, tab) {
     parent.appendChild(nav(tab));
     parent.appendChild(newPage);
     getNavEvents();
+    if(tab === 'Home') getCTA();
 }
 
 function removeAllChildren(parent){

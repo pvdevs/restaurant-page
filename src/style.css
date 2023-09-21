@@ -3,6 +3,7 @@
 :root {
     --main-bg-color: #FFFCF2;
     --cta-color: #001C80;
+    --secondary-text-color: #666563;
     --primary-font: 'Cormorant Garamond', serif;
     --secondary-font: 'inter', sans-serif;
 }
@@ -13,7 +14,7 @@ body, h1, p, h2, h3, h4 ,h5 {
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--main-bg-color);
     font-size: 16px;
 }
@@ -60,7 +61,7 @@ body{
 
 .top-nav {
     display: flex;
-    gap: 40px;
+    gap: 48px;
     justify-content: center;
     align-items: center;
     padding: 40px;
@@ -87,6 +88,75 @@ body{
     color: var(--cta-color);
 }
 
+.menu-page-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 56px;
+    padding-bottom: 112px;
+}
+
+.menu-meals {
+    width: 600px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.meal-title, .meal-price{
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    font-weight: 900;
+    font-style: italic;
+}
+
+.meal-details {
+    font-family: var(--secondary-font);
+    line-height: 1.75;
+    color: var(--secondary-text-color);
+}
+
+.meal-container {
+    display: grid;
+    grid-template-columns: 136px 1fr;
+    gap: 24px;
+}
+
+.meal-image-container {
+    height: 158px;
+    width: 100%;
+    grid-row: 1;
+}
+
+.meal-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.meal-title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bg-fish {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Used this property to prevent the background from being upfront content*/
+}
+
 .quote-container {
     display: flex;
     flex-direction: column;
@@ -96,16 +166,16 @@ body{
 
 .author {
     font-family: var(--primary-font);
-    font-size: 1.1rem;
-    font-weight: 800;
+    font-size: 1.25rem;
+    font-weight: 600;
     font-style: italic;
     align-self: end;
 }
 
 .quote-text{
     font-family: var(--primary-font);
-    font-size: 1.1rem;
-    font-weight: 800;
+    font-size: 1.25rem;
+    font-weight: 600;
     font-style: italic;
     overflow-wrap: break-word;
     text-align: justify;

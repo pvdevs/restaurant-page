@@ -1,13 +1,15 @@
+import Logo from './img/logo.svg';
+
 function home() {
     const page = document.createElement('div');
-    const logo = document.createElement('img');
     const button = document.createElement('button');
+    const logo = new Image();
 
     page.classList.add('page');
     logo.classList.add('logo');
     button.classList.add('call-to-action');
 
-    logo.setAttribute('src', '../src/img/logo.svg');
+    logo.src = Logo;
     button.textContent = 'See the menu';
 
     page.append(logo, button);
